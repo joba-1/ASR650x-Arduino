@@ -90,7 +90,7 @@ extern GpioIrqHandler GpioIrqHandlerCallback[P7_7];
 
 void globalGpioIsrEntry (void);
 void pinMode(uint8_t pin_name,PINMODE mode);
-void digitalWrite(uint8_t pin_name,PINLEVEL level);
+void digitalWrite(uint8_t pin_name, /* joba: many arduino libs/apps don't like type PINLEVEL */ uint8_t level);
 uint8 digitalRead(uint8_t pin_name);
 uint8 digitalReadOutPut(uint8_t pin_name);
 void pinToggle(uint8_t pin_name);
